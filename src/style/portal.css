@@ -1,0 +1,183 @@
+header{
+    background-color: var(--container-color);
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+header h2{
+    font-size: 20px;
+}
+
+.stopwatch{
+
+    text-align: right;
+    font-size: 20px;
+    color: #ff0000;
+    margin-top: 10px;
+    margin-right: 50px;
+    font-weight: 700;
+}
+
+.countdown-msg{
+    font-size: 14px;
+    margin-top: -5px;
+}
+
+.flash--stopwatch{
+    display: none;
+}
+
+.main{
+    padding: 0 20px;
+    max-width: 84%;
+    height: 300px;
+    margin: 20px 0px 20px 7%;
+    position: relative;
+    /* IN THE END */
+    overflow: hidden;
+    border: 0px solid #ff0000;
+}
+
+.wrap-question{
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 100%;
+    /* THIS creates the animation! */
+    transition: transform 1s;
+    
+}
+.question-container{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    margin-bottom: 30px;
+}
+
+.wrap-question h2{
+    font-size: 18px;
+}
+.wrap-question p{
+    margin-bottom: 10px;
+}
+
+.prenext-container{
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    border: 0px solid #ff0000;
+    margin-bottom: 70px;
+}
+
+.preslide{
+    position: absolute;
+    top: 0;
+    left: 7%;
+}
+.nextslide{
+    position: absolute;
+    top: 0;
+    right: 7%;
+}
+
+.prenext-container button{
+    padding: 10px 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btns-container{
+    padding: 0px 7%;
+}
+.opr-btn{
+    background-color: var(--container-color);
+    padding: 6px 18px;
+    margin: 10px;
+    border: 1.5 solid var(--container-color);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.active-opr-btn{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit-container{
+    padding: 20px 7%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.btn-submit{
+    background-color: var(--container-color);
+    border: 0;
+    padding: 15px 25px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+@media (max-width: 900px){
+    .btn-submit-container{
+        position: relative;
+    }
+}
+
+/*--------------------submit-conatiner & overlay-------------------*/
+
+.overlay-warning{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(68, 67, 67, 0.9);
+}
+
+.confirm-submit-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--container-color);
+    z-index: 5;
+    padding: 20px 3%;
+}
+
+.confirm-submit-container p{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.confirm-submit-container button{
+    padding: 11px 25px;
+    border: 0;
+    background-color: var(--bg-color);
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 50px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.confirm-submit-container h3{
+    margin: 20px 0;
+}
+
+.hidden{
+    display: none;
+}
