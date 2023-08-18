@@ -1,4 +1,5 @@
 import View from "./view.js";
+import * as countdown from './countdownView.js';
 
 class UserLogin extends View{
   _parentElement = document.querySelector('.form-group');
@@ -23,12 +24,10 @@ class UserLogin extends View{
       
       this._userProfileElement.innerHTML = `Welcome, ${this._currentAccount.fullname.toLowerCase().split(' ').map(name => name.replace(name.at(0),name.at(0).toUpperCase())).join(' ')} 
       <div type="text" class="user-id hidden">${this._currentAccount.password}</div>`;
-      this._hideShowForm();
-  }
-
-  _hideShowForm(){
-    document.querySelector('.form-overlay').classList.toggle('hidden');
-    document.querySelector('.container--login').classList.toggle('hidden');
+      username.value = password.value = '';
+      this.hideShowFormToggle();
+      countdown.countdown();
+      
   }
 
   _render(){

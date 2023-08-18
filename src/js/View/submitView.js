@@ -1,3 +1,4 @@
+import { logoutUser } from "./userLogout.js";
 import View from "./view.js";
 
 class SubmitView extends View{
@@ -57,7 +58,8 @@ class SubmitView extends View{
     const btnExit = document.querySelector('#exit-btn');
     btnExit.addEventListener('click', ()=>{
       this._hideshowModal();
-      console.log(this.container.querySelector('#exit-btn'))
+      logoutUser();
+      this.hideShowFormToggle();
     });
   };
   

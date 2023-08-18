@@ -27,4 +27,9 @@ export default class View{
   _clear(){
     this._parentElement.innerHTML = '';
   }
+
+  hideShowFormToggle(){
+    document.querySelector('.form-overlay').classList.toggle('hidden');
+    document.querySelector('.container--login').classList.toggle('hidden');
+  }
 }
