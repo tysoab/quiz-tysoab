@@ -5,6 +5,7 @@ class SubmitView extends View{
   _parentElement = document.querySelector('.btn-submit-container');
   _userId = document.querySelector('.candidate-info');
   _removeUserId;
+  _numOfQuestions;
   container;
   overlay;
 
@@ -27,6 +28,7 @@ class SubmitView extends View{
     if(!submitBtn) return;
     const questionConatiner = document.querySelector('.main-container')
     const getQuestions = questionConatiner.querySelectorAll('.slide');
+    this._numOfQuestions = getQuestions.length;
     getQuestions.forEach((question, i) => {
       const btnRadio = question.querySelectorAll(`input[name="${i}"]`)
       btnRadio.forEach(btn => {
@@ -47,6 +49,7 @@ class SubmitView extends View{
     const markUp = `
       <h3>Thanks for ur Time...</h3>
       <p>Score: <span>${this._score}</span></p>
+      <p>Per: <span>${(this._score / this._numOfQuestions * 100).toFixed(1)}%</span></p>
       <button id="exit-btn">Continue</button>
      `;
     this.container.innerHTML = '';

@@ -36,16 +36,62 @@ export const state = {
   }
 ];
 
+
 state.questions = [
+    {
+        question: 'What is the internet?',
+        options: {
+            a: 'Container that keeps a specific number of similar data types.',
+            b: ' global network of a computer that offers a wide range of information and communication facility',
+            c: 'World Wide Web'
+        },
+        answer: 'b'
+    },
+    {
+        question: 'What is an array?',
+        options: {
+            a: 'Container that keeps a specific number of similar data types.',
+            b: 'collection of abstract methods',
+            c: 'Dbms'
+        },
+        answer: 'a'
+    },
+    {
+        question: 'What is an Interface?',
+        options: {
+            a: 'Blueprint for creating objects',
+            b: 'collection of abstract methods',
+            c: 'A recored for file collection'
+        },
+        answer: 'b'
+    },
   {
-      question: '_____ is a software used for managing the database',
+      question: 'List out some computer processors',
       options: {
-          a: 'database management system',
-          b: 'database',
+          a: 'Intel core i9',
+          b: 'AMD',
           c: 'All of the Above'
       },
-      answer: 'a'
+      answer: 'c'
   },
+  {
+    question: 'Explain the meaning of file',
+    options: {
+        a: 'A file is a named location that stores information or data permanently',
+        b: 'A repository for storing related data',
+        c: 'A recored for file collection'
+    },
+    answer: 'a'
+},
+  {
+    question: '_____ is a software used for managing the database',
+    options: {
+        a: 'database management system',
+        b: 'database',
+        c: 'All of the Above'
+    },
+    answer: 'a'
+},
   {
       question: 'what does the acronym CPU stands for',
       options: {
