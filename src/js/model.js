@@ -133,9 +133,7 @@ state.questions = [
 export const deleteCandidate = function(userId){
     const deleteUser = state.candidates.findIndex(index => index.password === userId);
     if(deleteUser >= 0){
-    const copy = state.candidates.slice();
-    copy.splice(deleteUser, 1);
-    state.candidates =  copy;
+    state.candidates.splice(deleteUser, 1);
     }
 };
 

@@ -3,10 +3,7 @@ import { logoutUser } from "./userLogout";
 const countdownContainer = document.querySelector('.stopwatch');
 const minute = countdownContainer.querySelector('.minute-el');
 const second = countdownContainer.querySelector('.second-el');
-let seconds = 60;
-let minutes = 5;
 let intervalId;
-
 const render = function(){
 second.textContent = seconds;
 minute.textContent = minutes;
@@ -14,10 +11,14 @@ minute.textContent = minutes;
 
 
 export const countdown = function(){
+  let seconds = 60;
+  let minutes = 5;
   clearInterval(intervalId);
+
   intervalId = setInterval(()=>{
     seconds--;
-    render();
+    second.textContent = seconds;
+    minute.textContent = minutes;
     if(seconds === 0){
       seconds = 60;
       minutes--;
@@ -27,4 +28,5 @@ export const countdown = function(){
       }
     }
   }, 1000);
+  
 }

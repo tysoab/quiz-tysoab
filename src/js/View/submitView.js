@@ -1,4 +1,5 @@
 import { logoutUser } from "./userLogout.js";
+import Pagination from './pagination.js';
 import View from "./view.js";
 
 class SubmitView extends View{
@@ -33,11 +34,13 @@ class SubmitView extends View{
           if(btn.checked){
               const qNo = btn.name;
               if(btn.value.toLowerCase() === this._questions[qNo].answer) this._score += 1;
+              btn.checked = false;
           }
       })
     })
     this._removeUserId = this._userId.querySelector('.user-id').textContent;
     this._confirmSubmit();
+    Pagination.gotoSlide(0);
   }
 
   _confirmSubmit(){
